@@ -46,4 +46,4 @@ async function banCommand(sock, chatId, message) {
     }
 }
 
-module.exports = banCommand;
+module.exports = banCommand;Leo banned 
