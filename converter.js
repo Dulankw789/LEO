@@ -1,14 +1,3 @@
-/**
- * Knight Bot - A WhatsApp Bot
- * Copyright (c) 2024 Professor
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the MIT License.
- * 
- * Credits:
- * - Baileys Library by @adiwajshing
- * - Pair Code implementation inspired by TechGod143 & DGXEON
- */
 const fs = require('fs')
 const path = require('path')
 const { spawn } = require('child_process')
@@ -16,10 +5,10 @@ const { spawn } = require('child_process')
 function ffmpeg(buffer, args = [], ext = '', ext2 = '') {
   return new Promise(async (resolve, reject) => {
     try {
-      let tmp = path.join(__dirname, '../database', + new Date + '.' + ext)
+      let tmp = path.join(__dirname, '../tmp/', + new Date + '.' + ext)
       let out = tmp + '.' + ext2
       await fs.promises.writeFile(tmp, buffer)
-      spawn('ffmpeg', [
+      spawn("ffmpeg", [
         '-y',
         '-i', tmp,
         ...args,
