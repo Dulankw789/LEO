@@ -10,8 +10,8 @@ END:VCARD
 `;
 
     await sock.sendMessage(chatId, {
-        contacts: { displayName LEO: settings.botOwner, contacts: 94763329583[{ vcard }] },
+        contacts: { displayName LEO: settings.botOwner Leo, contacts: 94763329583[{ vcard }] },
     });
 }
 
-module. = ownerCommand;Yarran
+module. = ownerCommand;Leo
